@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Fredoka:wght@300..700&family=Teko:wght@300..700&display=swap');
+.background{
+    background-image: url('https://wallpapersmug.com/u/2fda8d/white-wall-lamp.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 900px;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.card-calculadora{
+    display: flex;
+    height: 400px;
+    width: 580px;
+    background-color: rgba(245, 230, 220, 0.463);
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Fredoka", sans-serif;
+    font-style: normal;
+    border-radius: 8px;
+    gap: 10px;
+    margin-top: 100px;
+    border: solid #f3dcb2b2;
+}
+
+.card-calculadora h1{
+    color: rgb(31, 45, 102);
+    font-size: 45px;
+    margin-bottom: 0%;
+}
+
+.card-calculadora input{
+    border-radius: 4px;
+    height: 30px;
+    text-align: center;
+    border-style: hidden;
+    font-family: "Fredoka", sans-serif;
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 25px;
+    color: rgb(41, 59, 128);
+    width: 40%;
+    margin-bottom: 10px;
+    margin-top: 2px;
+    border-color: #ffa600cd;
+    text-align: center;
+    border-style: solid;
+    margin-bottom: 0%;
+    
+}
+
+input:focus{
+    outline-color: #ffa600cd;
+}
+
+.entradabase{
+    border-radius: 4px;
+    margin-top: 0%;
+    height: 30px;
+    width: 140px;
+    text-align: center;
+    font-family: "Fredoka", sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    border-color: #ffa600cd;
+    
+}
+
+select:focus{
+    outline-color: #ffa600cd;
+}
+
+button{
+    background-color: rgb(41, 59, 128);
+    font-family: "Fredoka", sans-serif;
+    font-style:normal;
+    font-size: large;
+    height: 35px;
+    width: 100px;
+    color: #f3dcb2dc;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 20px;
+}
+button:hover{
+    background-color:rgb(71, 84, 134);
+    transform: scale(0.90);
+}
+
+.resultadodiv{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    gap: 1px;
+    font-family: "Fredoka", sans-serif;
+    font-style:normal;
+    font-size:larger;
+    font-weight: bold;
+    color:rgb(32, 46, 102);
+    width: 40%;
+    height: 20%;
+    background-color: #f3dcb27e;
+}
+
+.resultadodiv p{
+    margin-top: 2px;
+    margin-bottom: 2px;
+}

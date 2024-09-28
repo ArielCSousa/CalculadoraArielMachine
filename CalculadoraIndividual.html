@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="csscalculadora.css">
+    <title>Convert's Machine</title>
+
+</head>
+<body class="background">
+    
+    <div class="card-calculadora">
+        <h1>Convert's Machine</h1>
+        <br>
+        <input type="text" id="input_valor" placeholder="Digite aqui">
+        <select class="entradabase" id="input_base_entrada">
+            <option value="decimal">Decimal</option>
+            <option value="binario">Binário</option>
+            <option value="octal">Octal</option>
+            <option value="hexadecimal">Hexadecimal</option>
+        </select>
+        <button onclick="converter()">Converter</button>
+        <div class="resultadodiv" id="div_conversao"></div>
+    </div>
+   
+</body>
+</html>
+
+<script>
+    function converter(){
+        var valorEntrada = input_valor.value
+        var baseEntrada = input_base_entrada.value
+
+        div_conversao.innerHTML = ``
+
+        if(baseEntrada == 'decimal'){
+            valorEntrada  = Number(input_valor.value)
+            div_conversao.innerHTML += `
+            <p>Binário: ${valorEntrada.toString(2)}
+            <p>Octal: ${valorEntrada.toString(8)}<p>Hexadecimal: ${valorEntrada.toString(16).toUpperCase()}`
+
+        } else if(baseEntrada == 'binario'){
+            valorEntrada = parseInt(valorEntrada,2)
+            
+            div_conversao.innerHTML += `
+            <p>Decimal: ${valorEntrada}
+            <p>Octal: ${valorEntrada.toString(8)}<p>Hexadecimal: ${valorEntrada.toString(16).toUpperCase()}`
+
+        } else if(baseEntrada == 'octal'){
+            valorEntrada = parseInt(valorEntrada,8)
+
+            div_conversao.innerHTML += `
+            <p>Decimal: ${valorEntrada}
+            <p>Binário: ${valorEntrada.toString(2)}<p>Hexadecimal: ${valorEntrada.toString(16).toUpperCase()}`
+
+        } else if(baseEntrada == 'hexadecimal'){
+            valorEntrada = parseInt(valorEntrada,16)
+
+            div_conversao.innerHTML += `
+            <p>Decimal: ${valorEntrada}
+            <p>Binário: ${valorEntrada.toString(2)}<p>Octal: ${valorEntrada.toString(8).toUpperCase()}`
+        }
+    }
+</script>
